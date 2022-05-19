@@ -6,11 +6,9 @@ import org.json.simple.JSONObject;
 import org.junit.Test;
 import static io.restassured.RestAssured.given;
 
-public class BDDTEST
-{
+public class BDDTEST {
     @Test
-    public void getMethod()
-    {
+    public void getMethod() {
         Response response = RestAssured.get("http://localhost:3000/posts");
         response.prettyPrint();
         given().
@@ -19,6 +17,7 @@ public class BDDTEST
                 then().
                 statusCode(200);
     }
+
     @Test()
     public void postTest() {
 
@@ -57,5 +56,16 @@ public class BDDTEST
                 header("Content-Type", "application/json").
                 when().delete("http://localhost:3000/posts/1").then().statusCode(200);
 
+    }
+
+    @Test
+    public void getMethods() {
+        Response response = RestAssured.get("http://localhost:3000/posts");
+        response.prettyPrint();
+        given().
+                header("Content-Type", "application/json").
+                get("http://localhost:3000/posts").
+                then().
+                statusCode(200);
     }
 }
