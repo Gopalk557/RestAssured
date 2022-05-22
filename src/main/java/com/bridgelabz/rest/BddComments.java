@@ -27,7 +27,7 @@ public class BddComments
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("id", 3);
         jsonObject.put("body", "server");
-        jsonObject.put("postId", 3);
+        jsonObject.put("postId", 1);
 
         given().
                 header("Content-Type", "application/json").
