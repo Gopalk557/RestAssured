@@ -35,9 +35,6 @@ public class CurdForProfiles
         RequestSpecification request = RestAssured.given();
         request.header("content-type", "application/json");
         JSONObject jsonobject = new JSONObject();
-        //jsonobject.put("id", 3);
-        //jsonobject.put("title", "Testing");
-        //jsonobject.put("author", "Gopal");
         jsonobject.put("name", "typicode1");
         jsonobject.put("name", "typicode2");
         jsonobject.put("name", "typicode3");
